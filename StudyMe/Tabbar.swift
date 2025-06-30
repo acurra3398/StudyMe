@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  Tabbar.swift
 //  StudyMe
 //
 //  Created by Alex Currano on 6/24/25.
@@ -9,25 +9,36 @@ import SwiftUI
 
 struct Tabbar: View {
     var body: some View {
+        
         TabView {
             Home()
                 .tabItem {
                     Image("house")
-                        .resizable()
-                        .imageScale(.small)
-                        .foregroundStyle(.tint)
                     Text("Home")
+                        .foregroundColor(.black)
                 }
-            Text("this is going to be assignments")
+            Assignments()
                 .tabItem {
                     Image("memo")
-                        .resizable()
-                        .imageScale(.small)
-                        .foregroundStyle(.tint)
                     Text("Assignments")
+                        .foregroundColor(.black)
+                }
+            ToDo()
+                .tabItem {
+                    Image("dart")
+                    Text("To Do")
+                }
+            Reminders()
+                .tabItem {
+                    Image("bell")
+                    Text("Reminders")
+                }
+            StudyMeSettings()
+                .tabItem {
+                    Image("gear")
+                    Text("Settings")
                 }
         }
-        .padding()
     }
 }
 
