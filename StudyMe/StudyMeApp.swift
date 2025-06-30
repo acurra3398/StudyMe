@@ -11,8 +11,13 @@ import SwiftUI
 struct StudyMeApp: App {
     var body: some Scene {
         WindowGroup {
+            Assignments()
+            Home()
             Login()
             Tabbar()
+            ToDo()
+            Reminders()
+            StudyMeSettings()
         }
     }
 }

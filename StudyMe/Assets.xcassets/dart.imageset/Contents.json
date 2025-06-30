@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "dart.png",
+      "filename" : "dart@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "dart@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "dart@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

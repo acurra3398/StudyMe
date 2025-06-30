@@ -56,7 +56,7 @@ struct Login: View {
                     .background(Color.blue)
                     .cornerRadius(10)
                     
-                    NavigationLink(destination: Home().navigationBarBackButtonHidden(true), isActive: $showingLoginScreen) {
+                    NavigationLink(destination: Tabbar().navigationBarBackButtonHidden(true), isActive: $showingLoginScreen) {
                         EmptyView()
                     }
                 }
