@@ -7,12 +7,11 @@
 
 import SwiftUI
 import FirebaseAnalytics
-
+import Firebase
+import FirebaseAuth
 struct Login: View {
-    @State private var username = ""
+    @State private var email = ""
     @State private var password = ""
-    @State private var wrongUsername: Float = 0
-    @State private var wrongPassword: Float  = 0
     @State private var showingLoginScreen = false
     
     
@@ -35,12 +34,11 @@ struct Login: View {
                         .bold()
                         .padding()
                     
-                    TextField("Username", text: $username)
+                    TextField("Email", text: $email)
                         .padding()
                         .frame(width: 300, height: 50)
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(10)
-                        .border(.red, width: CGFloat(wrongUsername))
                         
                     
                     SecureField("Password", text: $password)
@@ -48,10 +46,9 @@ struct Login: View {
                         .frame(width: 300, height: 50)
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(10)
-                        .border(.red, width: CGFloat(wrongPassword))
                     
                     Button("Login") {
-                        authenticateUser(username: username, password: password)
+                        login()
                         }
                     .foregroundColor(.white)
                     .frame(width: 300, height: 50)
@@ -66,17 +63,10 @@ struct Login: View {
         }
     }
     
-    func authenticateUser(username: String, password: String) {
-        if username.lowercased() == "alex" {
-            wrongUsername = 0
-            if password.lowercased() == "123" {
-                wrongPassword = 0
-                showingLoginScreen = true
-            } else {
-                wrongPassword = 2
-            }
-        } else {
-            wrongUsername = 2
+    func login() {
+        Auth.auth().signIn(withEmail: email, password: password) {result, error in if error != nil {
+            print(error!.localizedDescription)
+        }
         }
     }
 }

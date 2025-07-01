@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9BCD9DB22E135B28004C23EB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9BCD9DB12E135B28004C23EB /* FirebaseAnalytics */; };
 		9BCD9DB42E135B28004C23EB /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9BCD9DB32E135B28004C23EB /* FirebaseAnalyticsCore */; };
+		9BFED82C2E137511005BE72B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9BFED82B2E137511005BE72B /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BCD9DB22E135B28004C23EB /* FirebaseAnalytics in Frameworks */,
+				9BFED82C2E137511005BE72B /* FirebaseAuth in Frameworks */,
 				9BCD9DB42E135B28004C23EB /* FirebaseAnalyticsCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				9B64ED712E09E0B2001C9DEB /* StudyMe */,
+				9BFED82A2E137511005BE72B /* Frameworks */,
 				9B64ED702E09E0B2001C9DEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +66,13 @@
 				9B64ED6F2E09E0B2001C9DEB /* StudyMe.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9BFED82A2E137511005BE72B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +97,7 @@
 			packageProductDependencies = (
 				9BCD9DB12E135B28004C23EB /* FirebaseAnalytics */,
 				9BCD9DB32E135B28004C23EB /* FirebaseAnalyticsCore */,
+				9BFED82B2E137511005BE72B /* FirebaseAuth */,
 			);
 			productName = StudyMe;
 			productReference = 9B64ED6F2E09E0B2001C9DEB /* StudyMe.app */;
@@ -373,6 +384,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9BCD9DB02E135B28004C23EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsCore;
+		};
+		9BFED82B2E137511005BE72B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BCD9DB02E135B28004C23EB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
