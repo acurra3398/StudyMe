@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct Tabbar: View {
     var body: some View {
@@ -39,6 +40,7 @@ struct Tabbar: View {
                     Text("Settings")
                 }
         }
+        .analyticsScreen(name: "\(Tabbar.self)")
     }
 }
 

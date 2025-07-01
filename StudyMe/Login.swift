@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct Login: View {
     @State private var username = ""
@@ -20,6 +21,7 @@ struct Login: View {
             ZStack {
                 Color.blue
                     .ignoresSafeArea()
+                    .analyticsScreen(name: "\(Login.self)")
                 Circle()
                     .scale(1.7)
                     .foregroundColor(.white.opacity(0.15))
